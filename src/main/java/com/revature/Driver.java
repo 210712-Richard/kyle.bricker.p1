@@ -4,26 +4,27 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.revature.controllers.UserController;
+import com.revature.models.User;
 
 import io.javalin.Javalin;
 import io.javalin.plugin.json.JavalinJackson;
 
 public class Driver {
 	public static void main(String[] args) {
-		//instantiateDatabase();
+		instantiateDatabase();
 		javalin();
 	}
 
 	public static void instantiateDatabase() {
 		DataBaseCreator.dropTables();
 		try {
-			Thread.sleep(30000); // wait 30 seconds
+			Thread.sleep(10000); 
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 		DataBaseCreator.createTables();
 		try {
-			Thread.sleep(20000); // wait 20 seconds
+			Thread.sleep(10000);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -42,6 +43,6 @@ public class Driver {
 		UserController uc = new UserController();
 	
 		app.get("/", (ctx)->ctx.html("Hello World"));		
-		app.put("/users/:username", uc::register);
+		app.put("/users", uc::register);
 	}
 }

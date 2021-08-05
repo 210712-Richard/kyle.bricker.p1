@@ -90,3 +90,32 @@
 2021-08-02 17:52:31 WARN  CassandraUtil:23 - com.revature.Driver.javalin(Driver.java:42)
 2021-08-02 17:52:31 WARN  CassandraUtil:23 - com.revature.Driver.main(Driver.java:14)
 2021-08-02 17:53:16 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 07:30:30 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 07:32:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 12:38:41 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 12:41:55 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 12:45:13 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 12:45:30 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 12:54:48 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 13:03:11 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 17:22:41 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 17:28:42 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 17:32:33 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 17:33:58 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 17:35:31 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 17:38:21 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 17:42:56 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-03 17:43:32 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-04 11:49:19 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-04 12:01:20 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-04 12:01:51 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-04 12:02:10 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-04 12:28:04 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-04 12:33:20 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-04 12:37:42 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-04 12:42:48 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-04 17:44:06 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-04 17:44:37 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-04 17:45:29 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-04 17:46:12 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-04 17:47:44 TRACE CassandraUtil:16 - Establishing connection with Cassandra

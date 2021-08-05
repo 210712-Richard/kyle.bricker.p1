@@ -13,8 +13,9 @@ public class DataBaseCreator {
 	}
 	
 	public static void createTables() {
-		StringBuilder sb = new StringBuilder("CREATE TABLE IF NOT EXISTS users (")
-				.append("name text PRIMARY KEY, reimbursements list<uuid> );");
+		StringBuilder sb = new StringBuilder(
+				"CREATE TABLE IF NOT EXISTS users (id bigint PRIMARY KEY, availableReimbursement bigint, name text, supervisorId bigint, headID bigint, benCo boolean, reimbursements list<uuid> );"
+				);
 		CassandraUtil.getInstance().getSession().execute(sb.toString());
 	}
 	
