@@ -119,3 +119,70 @@
 2021-08-04 17:45:29 TRACE CassandraUtil:16 - Establishing connection with Cassandra
 2021-08-04 17:46:12 TRACE CassandraUtil:16 - Establishing connection with Cassandra
 2021-08-04 17:47:44 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-05 10:33:39 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-05 10:41:03 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-05 10:46:30 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-05 10:48:26 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:02:42 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:04:25 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:07:07 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:09:18 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:10:53 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:11:48 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:12:53 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:14:11 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:15:07 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:16:54 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:18:24 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:23:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:38:34 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:39:20 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:44:06 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:46:55 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:49:19 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:52:36 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 13:54:26 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 14:00:28 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 14:02:38 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 14:03:21 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 14:04:29 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 14:05:26 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 14:14:12 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 14:16:05 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 15:30:35 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 15:31:37 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 15:35:05 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 15:36:31 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 15:42:20 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 15:44:09 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 22:32:11 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 22:33:50 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 22:34:33 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 22:34:59 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 22:37:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 22:38:19 DEBUG UserController:34 - {
+    "name":"CEO"
+}
+2021-08-07 22:38:19 DEBUG UserController:36 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-07 22:39:16 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 22:39:26 DEBUG UserController:34 - {
+    "name":"CEO"
+}
+2021-08-07 22:39:26 DEBUG UserController:36 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-07 22:39:27 DEBUG UserController:39 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-07 22:40:56 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-07 22:41:14 DEBUG UserController:34 - {
+    "name":"CEO"
+}
+2021-08-07 22:41:14 DEBUG UserController:36 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-07 22:41:14 DEBUG UserController:39 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-07 22:42:13 DEBUG UserController:34 - {
+    "name":"CEO"
+}
+2021-08-07 22:42:13 DEBUG UserController:36 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-07 22:42:13 DEBUG UserController:39 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-07 22:42:13 DEBUG UserController:34 - {
+    "name":"CEO"
+}
+2021-08-07 22:42:13 DEBUG UserController:36 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-07 22:42:14 DEBUG UserController:39 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]

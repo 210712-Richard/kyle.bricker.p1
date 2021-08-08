@@ -17,7 +17,7 @@ BenCo can:
 	
 Supervisor can:
 	approve Reimbursement
-	request information from use
+	request information from user
 	deny reimbursement, and give reason
 	auto-approve if none
 	confirm that presentation is satisfactory
@@ -28,5 +28,12 @@ Department Head can:
 	request info from user or supervisor
 	auto-approve if none
 	
-Chain of events:
-Employee submits a request
+TODO:
+User can create a reimbursement - Sunday
+Higher ranks can approve it - Sunday
+Figure out file uploading (S3) - Sunday
+The Form - Monday
+Timed approval - Tuesday
+request info - Wednesday
+Figure out logging - Thursday
+Figure out testing - Thursday

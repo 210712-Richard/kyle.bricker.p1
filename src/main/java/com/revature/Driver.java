@@ -11,7 +11,7 @@ import io.javalin.plugin.json.JavalinJackson;
 
 public class Driver {
 	public static void main(String[] args) {
-		instantiateDatabase();
+		//instantiateDatabase();
 		javalin();
 	}
 
@@ -44,5 +44,10 @@ public class Driver {
 	
 		app.get("/", (ctx)->ctx.html("Hello World"));		
 		app.put("/users", uc::register);
+		app.get("/users/:id", uc::getUser);
+		app.get("/users", uc::getUsers);
+		app.get("/users/:id/promote", uc::promote);
+		app.post("/users", uc::login);
+		app.delete("/users", uc::logout);
 	}
 }

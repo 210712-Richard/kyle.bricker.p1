@@ -1,10 +1,12 @@
 package com.revature.models;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.UUID;
 
-public class Reimbursement{
-	private User employee;
-	private float amount;
+public class Reimbursement implements Serializable{
+	private UUID id;
+	private long amount;
 	private LocalDate createdAt;
 	private boolean approvedByDS;
 	private boolean approvedByHead;
@@ -13,24 +15,30 @@ public class Reimbursement{
 	private boolean approved;
 	private boolean denied;
 	private String reasonForDenial;
+	private static final long serialVersionUID = 2622951313170302027L;
+
 	
 	public Reimbursement() {
 		this.createdAt = LocalDate.now();
 	}
 
-	public User getEmployee() {
-		return employee;
+	public UUID getId() {
+		return id;
 	}
 
-	public void setEmployee(User employee) {
-		this.employee = employee;
+	public void setId(UUID id) {
+		this.id = id;
 	}
 
-	public float getAmount() {
+	public void setCreatedAt(LocalDate createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public long getAmount() {
 		return amount;
 	}
 
-	public void setAmount(float amount) {
+	public void setAmount(long amount) {
 		this.amount = amount;
 	}
 

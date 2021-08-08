@@ -3,23 +3,36 @@ package com.revature.models;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class User implements Serializable{
 	private long id;
-	private float availableReimbursement=1000;
+	private long availableReimbursement=1000l;
 	private String name;
-	private User supervisor;
-	private User head;
+	private UUID supervisorId;
+	private UUID headId;
 	private boolean benCo;
 	private List<Reimbursement> reimbursements = new ArrayList<Reimbursement>(0);
+	private static final long serialVersionUID = 2622951313170302027L;
 	
 	public User() {}
+	
 
-	public float getAvailableReimbursement() {
+	public long getId() {
+		return id;
+	}
+
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+	public long getAvailableReimbursement() {
 		return availableReimbursement;
 	}
 
-	public void setAvailableReimbursement(float availableReimbursement) {
+	public void setAvailableReimbursement(long availableReimbursement) {
 		this.availableReimbursement = availableReimbursement;
 	}
 
@@ -38,20 +51,20 @@ public class User implements Serializable{
 	public void setReimbursements(List<Reimbursement> reimbursements) {
 		this.reimbursements = reimbursements;
 	}
-	public User getSupervisor() {
-		return supervisor;
+	public UUID getSupervisorId() {
+		return supervisorId;
 	}
 
-	public void setSupervisor(User supervisor) {
-		this.supervisor = supervisor;
+	public void setSupervisorId(UUID supervisorId) {
+		this.supervisorId = supervisorId;
 	}
 
-	public User getHead() {
-		return head;
+	public UUID getHeadId() {
+		return headId;
 	}
 
-	public void setHead(User head) {
-		this.head = head;
+	public void setHeadId(UUID headId) {
+		this.headId = headId;
 	}
 
 	public boolean isBenCo() {
@@ -61,4 +74,13 @@ public class User implements Serializable{
 	public void setBenCo(boolean benCo) {
 		this.benCo = benCo;
 	}
+
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", availableReimbursement=" + availableReimbursement + ", name=" + name
+				+ ", supervisorId=" + supervisorId + ", headId=" + headId + ", benCo=" + benCo + ", reimbursements="
+				+ reimbursements + "]";
+	}
+	
 }
