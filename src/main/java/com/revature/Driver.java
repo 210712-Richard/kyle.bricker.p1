@@ -3,6 +3,7 @@ package com.revature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.revature.controllers.ReimbursementController;
 import com.revature.controllers.UserController;
 import com.revature.models.User;
 
@@ -18,16 +19,17 @@ public class Driver {
 	public static void instantiateDatabase() {
 		DataBaseCreator.dropTables();
 		try {
-			Thread.sleep(10000); 
+			Thread.sleep(30000); 
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 		DataBaseCreator.createTables();
 		try {
-			Thread.sleep(10000);
+			Thread.sleep(30000);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+		DataBaseCreator.populateDatabase();
 		System.exit(0);
 	}
 
@@ -41,6 +43,7 @@ public class Driver {
 		Javalin app = Javalin.create().start(8080);
 		
 		UserController uc = new UserController();
+		ReimbursementController rc = new ReimbursementController();
 	
 		app.get("/", (ctx)->ctx.html("Hello World"));		
 		app.put("/users", uc::register);
@@ -49,5 +52,11 @@ public class Driver {
 		app.get("/users/:id/promote", uc::promote);
 		app.post("/users", uc::login);
 		app.delete("/users", uc::logout);
+		app.post("/reimbursements/:amount", uc::request);
+		app.get("/reimbursements", rc::getReimbursements);
+		app.get("/reimbursements/:id", rc::getReimbursement);
+		app.post("/users/:id", uc::approve);
+		app.put("/reimbursements/file/:id", rc::upload);
+		app.get("/reimbursements/file/:id", rc::getFile);
 	}
 }

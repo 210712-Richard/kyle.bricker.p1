@@ -28,17 +28,17 @@ public class UserDAO {
 		session.execute(bound);
 	}
 	
-	public User getUser(long id) {
+	public User getUser(UUID uuid) {
 		String query = "Select * from users where id=?";
 		SimpleStatement s = new SimpleStatementBuilder(query).build();
-		BoundStatement bound = session.prepare(s).bind(id);
+		BoundStatement bound = session.prepare(s).bind(uuid);
 		ResultSet rs = session.execute(bound);
 		Row row = rs.one();
 		if(row == null) {
 			return null;
 		}
 		User u = new User();
-		u.setId(row.getLong("id"));
+		u.setId(row.getUuid("id"));
 		u.setName(row.getString("name"));
 		u.setAvailableReimbursement(row.getLong("availableReimbursement"));
 		u.setSupervisorId(row.getUuid("supervisorId"));
@@ -57,7 +57,7 @@ public class UserDAO {
 			return null;
 		}
 		User u = new User();
-		u.setId(row.getLong("id"));
+		u.setId(row.getUuid("id"));
 		u.setName(row.getString("name"));
 		u.setAvailableReimbursement(row.getLong("availableReimbursement"));
 		u.setSupervisorId(row.getUuid("supervisorId"));
@@ -73,7 +73,7 @@ public class UserDAO {
 		List<User> users = new ArrayList<>();
 		rs.forEach(row -> {
 			User u = new User();
-			u.setId(row.getLong("id"));
+			u.setId(row.getUuid("id"));
 			u.setName(row.getString("name"));
 			u.setAvailableReimbursement(row.getLong("availableReimbursement"));
 			u.setSupervisorId(row.getUuid("supervisorId"));
@@ -97,7 +97,7 @@ public class UserDAO {
 		session.execute(bound);
 	}
 	
-	public List<UUID> getReimbursements(long id) {
+	public List<UUID> getReimbursements(UUID id) {
 		String query = "Select reimbursements from users where id=?";
 		SimpleStatement s = new SimpleStatementBuilder(query).build();
 		BoundStatement bound = session.prepare(s).bind(id);

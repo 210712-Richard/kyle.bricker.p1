@@ -34,21 +34,46 @@ public class UserService {
 		return u;
 	}
 	
-	public User getUser(long id) {
-		return ud.getUser(id);
+	public User getUser(UUID userId) {
+		User u = ud.getUser(userId);
+		List<UUID> reimbursementIds = ud.getReimbursements(u.getId());
+		List<Reimbursement> reimbursements = reimbursementIds.stream()
+				.map(id -> rd.getById(id))
+				.collect(Collectors.toList());
+		u.setReimbursements(reimbursements);
+		return u;
 	}
 	
 	public List<User> getUsers(){
-		return ud.getUsers();
+		List<User> u = ud.getUsers();
+		u.forEach(user -> {
+			List<UUID> reimbursementIds = ud.getReimbursements(user.getId());
+			List<Reimbursement> reimbursements = reimbursementIds.stream()
+					.map(id -> rd.getById(id))
+					.collect(Collectors.toList());
+			user.setReimbursements(reimbursements);
+		});
+		return u;
 	}
 	
 	public Reimbursement request(User u, long amount) {
 		Reimbursement r = new Reimbursement();
+		r.setId(UUID.randomUUID());
+		r.setCreatorId(u.getId());
 		r.setAmount(amount);
 		List<Reimbursement> l = u.getReimbursements();
 		l.add(r);
-		u.setReimbursements(l);;
+		u.setReimbursements(l);
+		u.setAvailableReimbursement(u.getAvailableReimbursement()-amount);
+		System.out.println(l);
+		ud.updateUser(u);
+		rd.addReimbursement(r);
 		return r;
+	}
+	
+	public List<Reimbursement> getReimbursements(User u){
+		return null;
+		
 	}
 
 	public boolean checkAvailability(String name) {
@@ -60,5 +85,20 @@ public class UserService {
 	
 	public void updateUser(User u) {
 		ud.updateUser(u);
+	}
+
+	public void approve(User u, UUID id) {
+		Reimbursement request = rd.getById(id);
+		User requestor = ud.getUser(request.getCreatorId());
+		if (u.getId().equals(requestor.getSupervisorId())) {
+			request.setApprovedByDS(true);
+		}
+		if (u.getId().equals(requestor.getHeadId())) {
+			request.setApprovedByHead(true);
+		}
+		if (u.isBenCo()) {
+			request.setApprovedByBenCo(true);
+		}
+		rd.updateReimbursement(request);
 	}
 }

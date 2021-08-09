@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class User implements Serializable{
-	private long id;
+	private UUID id;
 	private long availableReimbursement=1000l;
 	private String name;
 	private UUID supervisorId;
@@ -18,12 +18,12 @@ public class User implements Serializable{
 	public User() {}
 	
 
-	public long getId() {
+	public UUID getId() {
 		return id;
 	}
 
 
-	public void setId(long id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 

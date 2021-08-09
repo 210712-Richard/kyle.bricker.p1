@@ -6,6 +6,7 @@ import java.util.UUID;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.revature.models.Reimbursement;
 import com.revature.models.User;
 import com.revature.services.UserService;
 
@@ -19,7 +20,7 @@ public class UserController {
 		User u = ctx.bodyAsClass(User.class);
 
 		if(us.checkAvailability(u.getName())) {
-			u.setId(us.getUsers().size());
+			u.setId(UUID.randomUUID());
 			User newUser = us.register(u);
 			ctx.status(201);
 			ctx.json(newUser);
@@ -28,6 +29,17 @@ public class UserController {
 			ctx.html("Username already taken.");
 		}
 		
+	}
+	
+	public void request(Context ctx) {
+		Reimbursement r = new Reimbursement();
+		User u = ctx.sessionAttribute("loggedUser");
+		if(u==null) {
+			ctx.status(403);
+		} else {
+			r = us.request(ctx.sessionAttribute("loggedUser"), Long.parseLong(ctx.pathParam("amount")));
+			ctx.json(r);
+		}
 	}
 	
 	public void login(Context ctx) {
@@ -52,7 +64,7 @@ public class UserController {
 	}
 	
 	public void getUser(Context ctx) {
-		User u = us.getUser(Long.parseLong(ctx.pathParam("id")));
+		User u = us.getUser(UUID.fromString(ctx.pathParam("id")));
 		ctx.json(u);
 	}
 	
@@ -62,10 +74,19 @@ public class UserController {
 	}
 	
 	public void promote(Context ctx) {
-		User u = us.getUser(Long.parseLong(ctx.pathParam("id")));
+		User u = us.getUser(UUID.fromString(ctx.pathParam("id")));
 		u.setBenCo(true);
 		us.updateUser(u);
 		ctx.json(u);
+	}
+	
+	public void approve(Context ctx) {
+		User u = ctx.sessionAttribute("loggedUser");
+		if(u==null) {
+			ctx.status(403);
+		} else {
+			us.approve(u,UUID.fromString(ctx.pathParam("id")));
+		}
 	}
 
 }

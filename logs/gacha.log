@@ -186,3 +186,180 @@
 }
 2021-08-07 22:42:13 DEBUG UserController:36 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
 2021-08-07 22:42:14 DEBUG UserController:39 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 15:05:42 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:06:48 DEBUG UserController:46 - {
+    "name":"CEO"
+}
+2021-08-08 15:06:48 DEBUG UserController:48 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 15:06:48 DEBUG UserController:51 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 15:09:20 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:09:26 DEBUG UserController:46 - {
+    "name":"CEO"
+}
+2021-08-08 15:09:26 DEBUG UserController:48 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 15:09:26 DEBUG UserController:51 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 15:14:25 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:14:28 DEBUG UserController:46 - {
+    "name":"CEO"
+}
+2021-08-08 15:14:28 DEBUG UserController:48 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 15:14:28 DEBUG UserController:51 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 15:23:07 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:25:09 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:25:54 DEBUG UserController:46 - {
+    "name":"CEO"
+}
+2021-08-08 15:25:54 DEBUG UserController:48 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 15:25:54 DEBUG UserController:51 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[com.revature.models.Reimbursement@2aeda654]]
+2021-08-08 15:26:38 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:30:16 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:30:54 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:33:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:33:57 DEBUG UserController:46 - {
+    "name":"CEO"
+}
+2021-08-08 15:33:57 DEBUG UserController:48 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 15:33:57 DEBUG UserController:51 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=true, reimbursements=[]]
+2021-08-08 15:38:36 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:40:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:40:50 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:42:11 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:46:35 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:46:38 DEBUG UserController:46 - {
+    "name":"CEO"
+}
+2021-08-08 15:46:38 DEBUG UserController:48 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 15:46:38 DEBUG UserController:51 - User [id=0, availableReimbursement=500, name=CEO, supervisorId=null, headId=null, benCo=true, reimbursements=[com.revature.models.Reimbursement@1f29d8d6]]
+2021-08-08 15:49:34 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:49:45 DEBUG UserController:46 - {
+    "name":"CEO"
+}
+2021-08-08 15:49:45 DEBUG UserController:48 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 15:49:45 DEBUG UserController:51 - User [id=0, availableReimbursement=500, name=CEO, supervisorId=null, headId=null, benCo=true, reimbursements=[com.revature.models.Reimbursement@4381dbbd]]
+2021-08-08 15:52:27 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:53:40 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 15:54:02 DEBUG UserController:46 - {
+    "name":"CEO"
+}
+2021-08-08 15:54:02 DEBUG UserController:48 - User [id=0, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 15:54:02 DEBUG UserController:51 - User [id=0, availableReimbursement=500, name=CEO, supervisorId=null, headId=null, benCo=true, reimbursements=[com.revature.models.Reimbursement@1cc78c7e]]
+2021-08-08 16:50:33 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 16:52:46 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 16:53:03 DEBUG UserController:46 - {
+    "name":"CEO"
+}
+2021-08-08 16:53:03 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 16:53:04 DEBUG UserController:51 - User [id=ac3d6075-e109-446c-b197-318b122c662a, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 16:53:40 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 16:53:46 DEBUG UserController:46 - {
+    "name":"CEO"
+}
+2021-08-08 16:53:46 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 16:53:46 DEBUG UserController:51 - User [id=ac3d6075-e109-446c-b197-318b122c662a, availableReimbursement=500, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[null]]
+2021-08-08 16:54:15 DEBUG UserController:46 - {
+    "name":"CEO"
+}
+2021-08-08 16:54:15 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 16:54:15 DEBUG UserController:51 - User [id=ac3d6075-e109-446c-b197-318b122c662a, availableReimbursement=0, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[com.revature.models.Reimbursement@5381c21b]]
+2021-08-08 16:55:13 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 16:55:19 DEBUG UserController:46 - {
+    "name":"CEO"
+}
+2021-08-08 16:55:19 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 16:55:19 DEBUG UserController:51 - User [id=ac3d6075-e109-446c-b197-318b122c662a, availableReimbursement=0, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[com.revature.models.Reimbursement@5ae4ce7]]
+2021-08-08 17:11:46 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 17:13:15 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 17:15:25 DEBUG UserController:46 - {
+    "name":"CEO"
+}
+2021-08-08 17:15:25 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 17:15:25 DEBUG UserController:51 - User [id=75d5038d-9f5a-45f2-9718-b1ceb253dfdf, availableReimbursement=1000, name=CEO, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 17:19:49 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 17:21:17 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 17:22:38 DEBUG UserController:46 - {
+    "name":"Employee"
+}
+2021-08-08 17:22:38 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Employee, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 17:22:38 DEBUG UserController:51 - User [id=f0d4e5a7-79f6-4c32-ab75-9437da16e8c4, availableReimbursement=1000, name=Employee, supervisorId=f31b2ba6-33ad-4041-9c75-e8254cf7b1c8, headId=bb3d73d3-0b24-4fe8-91e9-9f69b4862781, benCo=false, reimbursements=[]]
+2021-08-08 17:26:03 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 17:26:46 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 17:28:03 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 17:28:26 DEBUG UserController:46 - {
+    "name":"Employee"
+}
+2021-08-08 17:28:26 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Employee, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 17:28:26 DEBUG UserController:51 - User [id=1a78d826-dcd3-48cc-a923-ae0ae86aadc3, availableReimbursement=1000, name=Employee, supervisorId=30be83f9-7b5d-496b-b20e-60243df20b2b, headId=7b8ecc9f-8b42-446e-9b3a-58873c6e9d76, benCo=false, reimbursements=[]]
+2021-08-08 17:28:45 DEBUG UserController:46 - {
+    "name":"Employee"
+}
+2021-08-08 17:28:45 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Employee, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 17:28:45 DEBUG UserController:51 - User [id=1a78d826-dcd3-48cc-a923-ae0ae86aadc3, availableReimbursement=1000, name=Employee, supervisorId=30be83f9-7b5d-496b-b20e-60243df20b2b, headId=7b8ecc9f-8b42-446e-9b3a-58873c6e9d76, benCo=false, reimbursements=[]]
+2021-08-08 17:32:13 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 17:32:21 DEBUG UserController:46 - {
+    "name":"Employee"
+}
+2021-08-08 17:32:21 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Employee, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 17:32:21 DEBUG UserController:51 - User [id=1a78d826-dcd3-48cc-a923-ae0ae86aadc3, availableReimbursement=500, name=Employee, supervisorId=30be83f9-7b5d-496b-b20e-60243df20b2b, headId=7b8ecc9f-8b42-446e-9b3a-58873c6e9d76, benCo=false, reimbursements=[com.revature.models.Reimbursement@41517206]]
+2021-08-08 17:32:51 DEBUG UserController:46 - {
+    "name":"Supervisor"
+}
+2021-08-08 17:32:51 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Supervisor, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 17:32:52 DEBUG UserController:51 - User [id=30be83f9-7b5d-496b-b20e-60243df20b2b, availableReimbursement=1000, name=Supervisor, supervisorId=7b8ecc9f-8b42-446e-9b3a-58873c6e9d76, headId=7b8ecc9f-8b42-446e-9b3a-58873c6e9d76, benCo=false, reimbursements=[]]
+2021-08-08 17:33:12 DEBUG UserController:46 - {
+    "name":"Employee"
+}
+2021-08-08 17:33:12 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Employee, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 17:33:12 DEBUG UserController:51 - User [id=1a78d826-dcd3-48cc-a923-ae0ae86aadc3, availableReimbursement=500, name=Employee, supervisorId=30be83f9-7b5d-496b-b20e-60243df20b2b, headId=7b8ecc9f-8b42-446e-9b3a-58873c6e9d76, benCo=false, reimbursements=[com.revature.models.Reimbursement@60f94e9e]]
+2021-08-08 17:33:20 DEBUG UserController:46 - {
+    "name":"Head"
+}
+2021-08-08 17:33:20 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Head, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 17:33:20 DEBUG UserController:51 - User [id=7b8ecc9f-8b42-446e-9b3a-58873c6e9d76, availableReimbursement=1000, name=Head, supervisorId=9fc92c9e-222a-467e-8514-6755add26afd, headId=7b8ecc9f-8b42-446e-9b3a-58873c6e9d76, benCo=false, reimbursements=[]]
+2021-08-08 17:33:29 DEBUG UserController:46 - {
+    "name":"Employee"
+}
+2021-08-08 17:33:29 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Employee, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 17:33:29 DEBUG UserController:51 - User [id=1a78d826-dcd3-48cc-a923-ae0ae86aadc3, availableReimbursement=500, name=Employee, supervisorId=30be83f9-7b5d-496b-b20e-60243df20b2b, headId=7b8ecc9f-8b42-446e-9b3a-58873c6e9d76, benCo=false, reimbursements=[com.revature.models.Reimbursement@8280237]]
+2021-08-08 17:33:37 DEBUG UserController:46 - {
+    "name":"BenCo"
+}
+2021-08-08 17:33:37 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=BenCo, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 17:33:37 DEBUG UserController:51 - User [id=7312f0e7-ae46-4425-8971-ce0ded7a49e2, availableReimbursement=1000, name=BenCo, supervisorId=9fc92c9e-222a-467e-8514-6755add26afd, headId=7b8ecc9f-8b42-446e-9b3a-58873c6e9d76, benCo=true, reimbursements=[]]
+2021-08-08 17:33:49 DEBUG UserController:46 - {
+    "name":"Employee"
+}
+2021-08-08 17:33:49 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Employee, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 17:33:49 DEBUG UserController:51 - User [id=1a78d826-dcd3-48cc-a923-ae0ae86aadc3, availableReimbursement=500, name=Employee, supervisorId=30be83f9-7b5d-496b-b20e-60243df20b2b, headId=7b8ecc9f-8b42-446e-9b3a-58873c6e9d76, benCo=false, reimbursements=[com.revature.models.Reimbursement@37cfd322]]
+2021-08-08 21:06:14 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 21:07:43 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 21:08:21 DEBUG UserController:46 - {
+    "name":"Employee"
+}
+2021-08-08 21:08:22 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Employee, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 21:08:22 DEBUG UserController:51 - User [id=95b3dd4e-d6c6-4888-a4c7-18ecb8003619, availableReimbursement=1000, name=Employee, supervisorId=746c0d82-7fe2-4779-aa3b-19457537feaf, headId=1f873ee1-bb87-41b6-9141-edd5be594b0d, benCo=false, reimbursements=[]]
+2021-08-08 21:13:37 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 21:14:52 DEBUG UserController:46 - {
+    "name":"Employee"
+}
+2021-08-08 21:14:52 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Employee, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 21:14:52 DEBUG UserController:51 - User [id=95b3dd4e-d6c6-4888-a4c7-18ecb8003619, availableReimbursement=500, name=Employee, supervisorId=746c0d82-7fe2-4779-aa3b-19457537feaf, headId=1f873ee1-bb87-41b6-9141-edd5be594b0d, benCo=false, reimbursements=[com.revature.models.Reimbursement@7b757578]]
+2021-08-08 21:17:41 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 21:17:58 DEBUG UserController:46 - {
+    "name":"Employee"
+}
+2021-08-08 21:17:58 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Employee, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 21:17:58 DEBUG UserController:51 - User [id=95b3dd4e-d6c6-4888-a4c7-18ecb8003619, availableReimbursement=500, name=Employee, supervisorId=746c0d82-7fe2-4779-aa3b-19457537feaf, headId=1f873ee1-bb87-41b6-9141-edd5be594b0d, benCo=false, reimbursements=[com.revature.models.Reimbursement@41250338]]
+2021-08-08 21:18:05 TRACE S3Util:37 - Uploading file as c1c47542-66eb-4243-8118-93f5c24a40ec.txt
+2021-08-08 21:28:10 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 21:28:21 DEBUG UserController:46 - {
+    "name":"Employee"
+}
+2021-08-08 21:28:21 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Employee, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 21:28:22 DEBUG UserController:51 - User [id=95b3dd4e-d6c6-4888-a4c7-18ecb8003619, availableReimbursement=500, name=Employee, supervisorId=746c0d82-7fe2-4779-aa3b-19457537feaf, headId=1f873ee1-bb87-41b6-9141-edd5be594b0d, benCo=false, reimbursements=[com.revature.models.Reimbursement@599af4e8]]
+2021-08-08 21:28:26 TRACE S3Util:37 - Uploading file as c1c47542-66eb-4243-8118-93f5c24a40ec.txt
+2021-08-08 21:32:23 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-08 21:32:29 DEBUG UserController:46 - {
+    "name":"Employee"
+}
+2021-08-08 21:32:30 DEBUG UserController:48 - User [id=null, availableReimbursement=1000, name=Employee, supervisorId=null, headId=null, benCo=false, reimbursements=[]]
+2021-08-08 21:32:30 DEBUG UserController:51 - User [id=95b3dd4e-d6c6-4888-a4c7-18ecb8003619, availableReimbursement=500, name=Employee, supervisorId=746c0d82-7fe2-4779-aa3b-19457537feaf, headId=1f873ee1-bb87-41b6-9141-edd5be594b0d, benCo=false, reimbursements=[com.revature.models.Reimbursement@4814e86d]]

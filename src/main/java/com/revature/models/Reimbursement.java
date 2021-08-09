@@ -6,6 +6,7 @@ import java.util.UUID;
 
 public class Reimbursement implements Serializable{
 	private UUID id;
+	private UUID creatorId;
 	private long amount;
 	private LocalDate createdAt;
 	private boolean approvedByDS;
@@ -15,11 +16,20 @@ public class Reimbursement implements Serializable{
 	private boolean approved;
 	private boolean denied;
 	private String reasonForDenial;
+	private String fileUrl;
 	private static final long serialVersionUID = 2622951313170302027L;
 
 	
 	public Reimbursement() {
 		this.createdAt = LocalDate.now();
+	}
+
+	public UUID getCreatorId() {
+		return creatorId;
+	}
+
+	public void setCreatorId(UUID creatorId) {
+		this.creatorId = creatorId;
 	}
 
 	public UUID getId() {
@@ -100,6 +110,14 @@ public class Reimbursement implements Serializable{
 
 	public void setReasonForDenial(String reasonForDenial) {
 		this.reasonForDenial = reasonForDenial;
+	}
+
+	public String getFileUrl() {
+		return fileUrl;
+	}
+
+	public void setFileUrl(String fileUrl) {
+		this.fileUrl = fileUrl;
 	}
 	
 	
