@@ -20,10 +20,10 @@ public class ReimbursementDAO {
 	private CqlSession session = CassandraUtil.getInstance().getSession();
 	
 	public void addReimbursement(Reimbursement r) {
-		String query = "Insert into reimbursements (id, creatorId, amount, createdAt, approvedByDS, approvedByHead, approvedByBenCo, exceedingAvailableFunds, approved, denied, reasonForDenial, fileUrl) values (?,?,?,?,?,?,?,?,?,?,?,?);";
+		String query = "Insert into reimbursements (id, creatorId, amount, createdAt, eventDate, eventLocation, gradeFormatIsPNP, approvedByDS, approvedByHead, approvedByBenCo, exceedingAvailableFunds, approved, denied, reasonForDenial, files) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
 		SimpleStatement s = new SimpleStatementBuilder(query).setConsistencyLevel(DefaultConsistencyLevel.LOCAL_QUORUM).build();
 		BoundStatement bound = session.prepare(s)
-				.bind(r.getId(),r.getCreatorId(),r.getAmount(),r.getCreatedAt(),r.isApprovedByDS(),r.isApprovedByHead(),r.isApprovedByBenCo(),r.isExceedingAvailableFunds(),r.isApproved(),r.isDenied(),r.getReasonForDenial(),r.getFileUrl());
+				.bind(r.getId(),r.getCreatorId(),r.getAmount(),r.getCreatedAt(),r.getEventDate(),r.getEventLocation(),r.getGradeFormatIsPNP(),r.isApprovedByDS(),r.isApprovedByHead(),r.isApprovedByBenCo(),r.isExceedingAvailableFunds(),r.isApproved(),r.isDenied(),r.getReasonForDenial(),r.getFiles());
 		session.execute(bound);
 	}
 
@@ -42,6 +42,9 @@ public class ReimbursementDAO {
 		r.setCreatorId(row.getUuid("creatorId"));
 		r.setAmount(row.getLong("amount"));
 		r.setCreatedAt(row.getLocalDate("createdAt"));
+		r.setEventDate(row.getLocalDate("eventDate"));
+		r.setEventLocation(row.getString("eventLocation"));
+		r.setGradeFormatIsPNP(row.getBool("gradeFormatIsPNP"));
 		r.setApprovedByDS(row.getBool("approvedByDS"));
 		r.setApprovedByHead(row.getBool("approvedByHead"));
 		r.setApprovedByBenCo(row.getBool("approvedByBenCo"));
@@ -49,7 +52,7 @@ public class ReimbursementDAO {
 		r.setApproved(row.getBool("approved"));
 		r.setDenied(row.getBool("denied"));
 		r.setReasonForDenial(row.getString("reasonForDenial"));
-		r.setFileUrl(row.getString("fileUrl"));
+		r.setFiles(row.getList("files", String.class));
 		return r;
 	}
 	
@@ -64,6 +67,9 @@ public class ReimbursementDAO {
 			r.setCreatorId(row.getUuid("creatorId"));
 			r.setAmount(row.getLong("amount"));
 			r.setCreatedAt(row.getLocalDate("createdAt"));
+			r.setEventDate(row.getLocalDate("eventDate"));
+			r.setEventLocation(row.getString("eventLocation"));
+			r.setGradeFormatIsPNP(row.getBool("gradeFormatIsPNP"));
 			r.setApprovedByDS(row.getBool("approvedByDS"));
 			r.setApprovedByHead(row.getBool("approvedByHead"));
 			r.setApprovedByBenCo(row.getBool("approvedByBenCo"));
@@ -71,7 +77,7 @@ public class ReimbursementDAO {
 			r.setApproved(row.getBool("approved"));
 			r.setDenied(row.getBool("denied"));
 			r.setReasonForDenial(row.getString("reasonForDenial"));
-			r.setFileUrl(row.getString("fileUrl"));
+			r.setFiles(row.getList("files", String.class));
 			reimbursements.add(r);
 		});
 				
@@ -79,10 +85,10 @@ public class ReimbursementDAO {
 	}
 	
 	public void updateReimbursement(Reimbursement r) {
-		String query = "Update reimbursements set creatorId = ?, amount = ?, createdAt = ?, approvedByDS = ?, approvedByHead = ?, approvedByBenCo = ?, exceedingAvailableFunds=?, approved = ?, denied = ?, reasonForDenial = ?, fileUrl = ? where id = ?;";
+		String query = "Update reimbursements set creatorId = ?, amount = ?, createdAt = ?, eventDate = ?, eventLocation = ?, gradeFormatIsPNP = ?, approvedByDS = ?, approvedByHead = ?, approvedByBenCo = ?, exceedingAvailableFunds=?, approved = ?, denied = ?, reasonForDenial = ?, files = ? where id = ?;";
 		SimpleStatement s = new SimpleStatementBuilder(query).setConsistencyLevel(DefaultConsistencyLevel.LOCAL_QUORUM).build();
 		BoundStatement bound = session.prepare(s)
-				.bind(r.getCreatorId(),r.getAmount(),r.getCreatedAt(),r.isApprovedByDS(),r.isApprovedByHead(),r.isApprovedByBenCo(),r.isExceedingAvailableFunds(),r.isApproved(),r.isDenied(),r.getReasonForDenial(),r.getFileUrl(),r.getId());
+				.bind(r.getCreatorId(),r.getAmount(),r.getCreatedAt(),r.getEventDate(),r.getEventLocation(),r.getGradeFormatIsPNP(),r.isApprovedByDS(),r.isApprovedByHead(),r.isApprovedByBenCo(),r.isExceedingAvailableFunds(),r.isApproved(),r.isDenied(),r.getReasonForDenial(),r.getFiles(),r.getId());
 		session.execute(bound);
 	}
 }

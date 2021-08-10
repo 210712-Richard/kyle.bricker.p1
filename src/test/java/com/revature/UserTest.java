@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import com.revature.models.Reimbursement;
 import com.revature.models.User;
 import com.revature.services.UserService;
 
@@ -15,7 +16,8 @@ class UserTest {
 	void testRequest() {
 		UserService us = new UserService();
 		User kyle=new User();
-		us.request(kyle, 800);
+		Reimbursement r = new Reimbursement();
+		us.request(kyle, r);
 		Assert.assertNotNull(kyle.getReimbursements());
 	}
 

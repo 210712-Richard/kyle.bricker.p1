@@ -23,7 +23,7 @@ public class DataBaseCreator {
 				);
 		CassandraUtil.getInstance().getSession().execute(sb.toString());
 		sb = new StringBuilder(
-				"CREATE TABLE IF NOT EXISTS reimbursements (id uuid PRIMARY KEY, creatorId uuid, amount bigint, createdAt date, approvedByDS boolean, approvedByHead boolean, approvedByBenCo boolean, exceedingAvailableFunds boolean, approved boolean, denied boolean, reasonForDenial text, fileUrl text);"
+				"CREATE TABLE IF NOT EXISTS reimbursements (id uuid PRIMARY KEY, creatorId uuid, amount bigint, createdAt date, eventDate date, eventLocation text, gradeFormatIsPNP boolean, approvedByDS boolean, approvedByHead boolean, approvedByBenCo boolean, exceedingAvailableFunds boolean, approved boolean, denied boolean, reasonForDenial text, files list<text>);"
 				);
 		CassandraUtil.getInstance().getSession().execute(sb.toString());
 	}

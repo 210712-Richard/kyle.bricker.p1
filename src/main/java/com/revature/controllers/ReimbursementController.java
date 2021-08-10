@@ -37,15 +37,16 @@ public class ReimbursementController {
 			ctx.status(404);
 			return;
 		}
-		String filetype = ctx.header("extension");
-		if(filetype == null) {
+		String filename = ctx.header("filename");
+		if(filename == null) {
 			ctx.status(400);
 			return;
 		}
-		String key = ctx.pathParam("id")+"."+filetype;
-		//The actual file comes from the request body
+		String key = filename;
 		S3Util.getInstance().uploadToBucket(key, ctx.bodyAsBytes());
-		r.setFileUrl(key);
+		List<String> files = r.getFiles();
+		files.add(key);
+		r.setFiles(files);
 		rs.updateReimbursement(r);;
 		ctx.json(r);
 	}
@@ -63,7 +64,7 @@ public class ReimbursementController {
 			return;
 		}
 		try {
-			InputStream file = S3Util.getInstance().getObject(r.getFileUrl());
+			InputStream file = S3Util.getInstance().getObject(ctx.pathParam("key"));
 			ctx.result(file);
 		} catch (Exception e) {
 			ctx.status(500);

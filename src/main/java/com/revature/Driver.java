@@ -19,13 +19,13 @@ public class Driver {
 	public static void instantiateDatabase() {
 		DataBaseCreator.dropTables();
 		try {
-			Thread.sleep(30000); 
+			Thread.sleep(50000); 
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 		DataBaseCreator.createTables();
 		try {
-			Thread.sleep(30000);
+			Thread.sleep(50000);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -52,11 +52,11 @@ public class Driver {
 		app.get("/users/:id/promote", uc::promote);
 		app.post("/users", uc::login);
 		app.delete("/users", uc::logout);
-		app.post("/reimbursements/:amount", uc::request);
+		app.post("/reimbursements", uc::request);
 		app.get("/reimbursements", rc::getReimbursements);
 		app.get("/reimbursements/:id", rc::getReimbursement);
 		app.post("/users/:id", uc::approve);
 		app.put("/reimbursements/file/:id", rc::upload);
-		app.get("/reimbursements/file/:id", rc::getFile);
+		app.get("/reimbursements/file/:id/:key", rc::getFile);
 	}
 }

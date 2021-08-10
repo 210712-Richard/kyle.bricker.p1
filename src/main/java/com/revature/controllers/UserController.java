@@ -1,5 +1,7 @@
 package com.revature.controllers;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -11,6 +13,7 @@ import com.revature.models.User;
 import com.revature.services.UserService;
 
 import io.javalin.http.Context;
+import jdk.internal.org.jline.utils.Log;
 
 public class UserController {
 	private static Logger log = LogManager.getLogger(UserController.class);
@@ -32,24 +35,23 @@ public class UserController {
 	}
 	
 	public void request(Context ctx) {
-		Reimbursement r = new Reimbursement();
+		Reimbursement r = ctx.bodyAsClass(Reimbursement.class);
 		User u = ctx.sessionAttribute("loggedUser");
 		if(u==null) {
 			ctx.status(403);
 		} else {
-			r = us.request(ctx.sessionAttribute("loggedUser"), Long.parseLong(ctx.pathParam("amount")));
+			r.setId(UUID.randomUUID());
+			r.setCreatedAt(LocalDate.now());
+			r.setCreatorId(u.getId());
+			log.debug(r.toString());
+			r = us.request(ctx.sessionAttribute("loggedUser"), r);
 			ctx.json(r);
 		}
 	}
 	
 	public void login(Context ctx) {
-		log.debug(ctx.body());
-		User u = ctx.bodyAsClass(User.class);
-		log.debug(u);
-		
-		u = us.login(u.getName());
-		log.debug(u);
-		
+		User u = ctx.bodyAsClass(User.class);		
+		u = us.login(u.getName());		
 		if(u != null) {
 			ctx.sessionAttribute("loggedUser", u);
 			ctx.json(u);

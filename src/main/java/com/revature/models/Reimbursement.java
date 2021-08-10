@@ -2,6 +2,7 @@ package com.revature.models;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.UUID;
 
 public class Reimbursement implements Serializable{
@@ -9,6 +10,9 @@ public class Reimbursement implements Serializable{
 	private UUID creatorId;
 	private long amount;
 	private LocalDate createdAt;
+	private LocalDate eventDate;
+	private String eventLocation;
+	private boolean gradeFormatIsPNP;
 	private boolean approvedByDS;
 	private boolean approvedByHead;
 	private boolean approvedByBenCo;
@@ -16,7 +20,7 @@ public class Reimbursement implements Serializable{
 	private boolean approved;
 	private boolean denied;
 	private String reasonForDenial;
-	private String fileUrl;
+	private List<String> files;
 	private static final long serialVersionUID = 2622951313170302027L;
 
 	
@@ -112,13 +116,48 @@ public class Reimbursement implements Serializable{
 		this.reasonForDenial = reasonForDenial;
 	}
 
-	public String getFileUrl() {
-		return fileUrl;
+	public LocalDate getEventDate() {
+		return eventDate;
 	}
 
-	public void setFileUrl(String fileUrl) {
-		this.fileUrl = fileUrl;
+	public void setEventDate(LocalDate eventDate) {
+		this.eventDate = eventDate;
 	}
-	
+
+	public String getEventLocation() {
+		return eventLocation;
+	}
+
+	public void setEventLocation(String eventLocation) {
+		this.eventLocation = eventLocation;
+	}
+
+	public boolean getGradeFormatIsPNP() {
+		return gradeFormatIsPNP;
+	}
+
+	public void setGradeFormatIsPNP(boolean gradeFormatIsPNP) {
+		this.gradeFormatIsPNP = gradeFormatIsPNP;
+	}
+
+	public List<String> getFiles() {
+		return files;
+	}
+
+	public void setFiles(List<String> files) {
+		this.files = files;
+	}
+
+	@Override
+	public String toString() {
+		return "Reimbursement [id=" + id + ", creatorId=" + creatorId + ", amount=" + amount + ", createdAt="
+				+ createdAt + ", eventDate=" + eventDate + ", eventLocation=" + eventLocation + ", gradeFormatIsPNP="
+				+ gradeFormatIsPNP + ", approvedByDS=" + approvedByDS + ", approvedByHead=" + approvedByHead
+				+ ", approvedByBenCo=" + approvedByBenCo + ", exceedingAvailableFunds=" + exceedingAvailableFunds
+				+ ", approved=" + approved + ", denied=" + denied + ", reasonForDenial=" + reasonForDenial + ", files="
+				+ files + "]";
+	}
+
+
 	
 }

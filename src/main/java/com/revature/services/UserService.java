@@ -56,15 +56,11 @@ public class UserService {
 		return u;
 	}
 	
-	public Reimbursement request(User u, long amount) {
-		Reimbursement r = new Reimbursement();
-		r.setId(UUID.randomUUID());
-		r.setCreatorId(u.getId());
-		r.setAmount(amount);
+	public Reimbursement request(User u, Reimbursement r) {
 		List<Reimbursement> l = u.getReimbursements();
 		l.add(r);
 		u.setReimbursements(l);
-		u.setAvailableReimbursement(u.getAvailableReimbursement()-amount);
+		u.setAvailableReimbursement(u.getAvailableReimbursement()-r.getAmount());
 		System.out.println(l);
 		ud.updateUser(u);
 		rd.addReimbursement(r);
@@ -98,6 +94,16 @@ public class UserService {
 		}
 		if (u.isBenCo()) {
 			request.setApprovedByBenCo(true);
+		}
+		if (u.getId().equals(requestor.getSupervisorId()) && 
+				request.getGradeFormatIsPNP() && request.getFiles().size()>0 &&
+				request.isApprovedByBenCo() && request.isApprovedByHead()) {
+			request.setApproved(true);
+		}
+		if (u.isBenCo() && 
+				!request.getGradeFormatIsPNP() && request.getFiles().size()>0 &&
+				request.isApprovedByDS() && request.isApprovedByHead()) {
+			request.setApproved(true);
 		}
 		rd.updateReimbursement(request);
 	}
