@@ -42,6 +42,12 @@ public class ReimbursementController {
 			ctx.status(400);
 			return;
 		}
+		if (filename.toLowerCase().contains("supervisor")) {
+			r.setApprovedByDS(true);
+		}
+		if (filename.toLowerCase().contains("head")) {
+			r.setApprovedByHead(true);
+		}
 		String key = filename;
 		S3Util.getInstance().uploadToBucket(key, ctx.bodyAsBytes());
 		List<String> files = r.getFiles();

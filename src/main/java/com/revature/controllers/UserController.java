@@ -50,10 +50,13 @@ public class UserController {
 	}
 	
 	public void login(Context ctx) {
-		User u = ctx.bodyAsClass(User.class);		
-		u = us.login(u.getName());		
+		final User u = us.login(ctx.bodyAsClass(User.class).getName());
+		log.trace(u);
 		if(u != null) {
 			ctx.sessionAttribute("loggedUser", u);
+			u.getReimbursements().forEach(r -> {
+				us.approve(u, r.getId());
+			});
 			ctx.json(u);
 			return;
 		}
@@ -87,7 +90,26 @@ public class UserController {
 		if(u==null) {
 			ctx.status(403);
 		} else {
-			us.approve(u,UUID.fromString(ctx.pathParam("id")));
+			Reimbursement r = us.deny(u,UUID.fromString(ctx.pathParam("id")), ctx.body());
+			if (r==null) {
+				ctx.status(404);
+			} else {
+				ctx.json(r);
+			}
+		}
+	}
+	
+	public void deny(Context ctx) {
+		User u = ctx.sessionAttribute("loggedUser");
+		if(u==null) {
+			ctx.status(403);
+		} else {
+			Reimbursement r = us.deny(u,UUID.fromString(ctx.pathParam("id")), ctx.body());
+			if (r==null) {
+				ctx.status(404);
+			} else {
+				ctx.json(r);
+			}
 		}
 	}
 

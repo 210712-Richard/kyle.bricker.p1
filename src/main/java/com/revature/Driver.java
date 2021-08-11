@@ -56,6 +56,7 @@ public class Driver {
 		app.get("/reimbursements", rc::getReimbursements);
 		app.get("/reimbursements/:id", rc::getReimbursement);
 		app.post("/users/:id", uc::approve);
+		app.post("/reimbursements/:id", uc::deny);
 		app.put("/reimbursements/file/:id", rc::upload);
 		app.get("/reimbursements/file/:id/:key", rc::getFile);
 	}
