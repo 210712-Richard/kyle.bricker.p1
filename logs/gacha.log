@@ -527,3 +527,35 @@
 2021-08-11 13:27:51 TRACE UserController:54 - User [id=cc6027f2-cc23-4c6c-bf88-cc905e1ef0dd, availableReimbursement=100, name=Employee, supervisorId=12079421-3530-4b04-86dd-73d2ae1bac2a, headId=af97363f-f013-4417-af2a-09a362cd94b6, benCo=false, reimbursements=[Reimbursement [id=3e85eb78-fb84-4489-82e3-79f6d3db8757, creatorId=cc6027f2-cc23-4c6c-bf88-cc905e1ef0dd, amount=400, createdAt=2021-08-11, eventDate=2022-01-01, eventLocation=San Jose, gradeFormatIsPNP=false, approvedByDS=true, approvedByHead=true, approvedByBenCo=true, exceedingAvailableFunds=false, approved=true, denied=false, reasonForDenial=null, files=[headapproval.txt]], Reimbursement [id=b3022e56-8f89-4c8c-9936-b62817785ead, creatorId=cc6027f2-cc23-4c6c-bf88-cc905e1ef0dd, amount=500, createdAt=2021-08-11, eventDate=2022-01-01, eventLocation=San Jose, gradeFormatIsPNP=false, approvedByDS=false, approvedByHead=false, approvedByBenCo=false, exceedingAvailableFunds=false, approved=false, denied=false, reasonForDenial=null, files=[]]]]
 2021-08-11 13:28:56 TRACE UserController:54 - User [id=af97363f-f013-4417-af2a-09a362cd94b6, availableReimbursement=1000, name=Head, supervisorId=4426a8ef-dbdb-428c-aba5-3466c860f803, headId=af97363f-f013-4417-af2a-09a362cd94b6, benCo=false, reimbursements=[]]
 2021-08-11 13:29:06 TRACE UserController:54 - User [id=2ee6ea63-80af-450b-bf1d-7476beaf2908, availableReimbursement=1000, name=BenCo, supervisorId=4426a8ef-dbdb-428c-aba5-3466c860f803, headId=af97363f-f013-4417-af2a-09a362cd94b6, benCo=true, reimbursements=[]]
+2021-08-12 12:39:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:39:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:39:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:39:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:39:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:39:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:39:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:39:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:39:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:39:08 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:39:59 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:42:06 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:42:34 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:42:44 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:43:29 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:43:42 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:45:43 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:46:05 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:46:22 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:48:19 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 12:56:17 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 13:32:14 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 13:32:56 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 13:33:49 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 13:34:29 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 13:35:34 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 13:36:49 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 13:37:37 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 13:38:55 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 13:41:34 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 13:42:53 TRACE CassandraUtil:16 - Establishing connection with Cassandra
+2021-08-12 13:45:49 TRACE CassandraUtil:16 - Establishing connection with Cassandra

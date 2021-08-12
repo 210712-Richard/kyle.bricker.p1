@@ -11,7 +11,7 @@ import com.revature.data.UserDAO;
 import com.revature.models.Reimbursement;
 
 public class ReimbursementService {
-	private Logger log = LogManager.getLogger(UserService.class);
+	private Logger log = LogManager.getLogger(ReimbursementService.class);
 	public UserDAO ud = new UserDAO();
 	public ReimbursementDAO rd = new ReimbursementDAO();
 	

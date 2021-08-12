@@ -2,58 +2,81 @@ package com.revature;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.UUID;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Mockito;
+
+import com.revature.services.UserService;
+import com.revature.data.UserDAO;
+import com.revature.models.Reimbursement;
+import com.revature.models.User;
+
 
 class UserServiceTest {
+	private static UserService us;
+	private static User u;
+	
+	@BeforeAll
+	public static void prepareAll() {
+		u=new User();
+		u.setName("Test");
+		u.setId(UUID.randomUUID());
+	}
+	
+	@BeforeEach
+	public void prepareEach() {
+		us = new UserService();
+		us.ud = Mockito.mock(UserDAO.class);
+	}
 
 	@Test
 	void testRegister() {
-		fail("Not yet implemented");
+		us.register(u);
+		ArgumentCaptor<User> captor = ArgumentCaptor.forClass(User.class);
+		Mockito.verify(us.ud).addUser(captor.capture());
+		User u = captor.getValue();
+		assertEquals(1000,u.getAvailableReimbursement());
 	}
 
-	@Test
-	void testLogin() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	void testGetUser() {
-		fail("Not yet implemented");
+		assertEquals(null,us.getUser(u.getId()));
 	}
 
 	@Test
 	void testGetUsers() {
-		fail("Not yet implemented");
+		assertEquals(0,us.getUsers().size());
 	}
 
 	@Test
 	void testRequest() {
-		fail("Not yet implemented");
+		Reimbursement r = new Reimbursement();
+		r.setId(UUID.randomUUID());
+		assertNotNull(us.request(u, r));
 	}
 
-	@Test
-	void testGetReimbursements() {
-		fail("Not yet implemented");
-	}
+//	@Test
+//	void testGetReimbursements() {
+//	}
 
 	@Test
 	void testCheckAvailability() {
-		fail("Not yet implemented");
+		assertEquals(true,us.checkAvailability("Test"));
 	}
-
-	@Test
-	void testUpdateUser() {
-		fail("Not yet implemented");
-	}
-
+	
 	@Test
 	void testApprove() {
-		fail("Not yet implemented");
+		assertEquals(null,us.approve(u, UUID.randomUUID()));
 	}
 
 	@Test
 	void testDeny() {
-		fail("Not yet implemented");
+		assertEquals(null,us.deny(u, UUID.randomUUID(),"TestReason"));
 	}
 
 }

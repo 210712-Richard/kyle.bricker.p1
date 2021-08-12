@@ -35,6 +35,7 @@ public class UserService {
 	
 	public User getUser(UUID userId) {
 		User u = ud.getUser(userId);
+		if (u==null) {return null;}
 		List<UUID> reimbursementIds = ud.getReimbursements(u.getId());
 		List<Reimbursement> reimbursements = reimbursementIds.stream()
 				.map(id -> rd.getById(id))
@@ -65,11 +66,11 @@ public class UserService {
 		rd.addReimbursement(r);
 		return r;
 	}
-	
-	public List<Reimbursement> getReimbursements(User u){
-		return null;
-		
-	}
+//	
+//	public List<Reimbursement> getReimbursements(User u){
+//		return null;
+//		
+//	}
 
 	public boolean checkAvailability(String name) {
 		if (ud.getUser(name)==null) {
